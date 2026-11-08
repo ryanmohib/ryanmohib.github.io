@@ -1,0 +1,20 @@
+Mobile: 0–767px
+Tablet: 768–1023px
+Desktop: 1024px and above
+
+===========================
+
+background :  #0B1120 (The main page background.)
+
+surface : #111827 (Cards, panels, and sidebars.)
+
+primary : #2563EB (Main buttons and important actions.)
+ 
+accent : #38BDF8 (
+Highlights, indicators, and special details.)
+
+text : #F8FAFC (Main headings and readable content.)
+
+muted-text : #94A3B8 (Descriptions and less important text.)
+
+border : #1E293B (Separators, outlines, and card edges.)
