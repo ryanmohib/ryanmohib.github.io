@@ -3,17 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Rayan Mouhib - full stack developer in the making. HTML, CSS, JavaScript, Python and Bootstrap..."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Rayan Mouhib - Full Stack Developer in the making"
+    />
+    <meta
+      property="og:description"
+      content="My portfolio: projects, skills and contact."
+    />
+    <meta property="og:url" content="https://rayanmouhib.me/" />
+    <meta
+      property="og:image"
+      content="https://rayanmouhib.me/images/og-preview.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
+
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="images/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="images/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="icon" href="images/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
     <script src="script.js" defer></script>
     <title>Rayan Mouhib</title>
   </head>
@@ -25,48 +60,97 @@
           <a href="#" class="logo">rayanmouhib</a>
         </div>
         <nav class="nav">
-          <ul class="nav-list1">
-            <li class="nav-item1">
-              <a href="#" class="nav-link1">About</a>
+          <ul class="nav-links">
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
             </li>
-            <li class="nav-item1">
-              <a href="#" class="nav-link1">Projects</a>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Projects</a>
             </li>
-            <li class="nav-item1">
-              <a href="#" class="nav-link1">Contact</a>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact</a>
             </li>
           </ul>
           <hr class="nav-separator" />
-          <ul class="nav-list2">
-            <li class="nav-item01">
-              <a href="mailto:rynmouhib@gmail.com" target="_blank">
-                <i class="fa-regular fa-envelope" style="color: #f0f8ff"></i>
+          <ul class="nav-social">
+            <li class="nav-social-item">
+              <a href="mailto:rynmouhib@gmail.com" aria-label="Email">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
               </a>
             </li>
-            <li class="nav-item01">
-              <a href="https://github.com/ryanmohib/" target="_blank">
-                <i class="fa-brands fa-github" style="color: #f0f8ff"></i>
+            <li class="nav-social-item">
+              <a
+                href="https://github.com/ryanmohib/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  />
+                </svg>
               </a>
             </li>
-            <li class="nav-item01">
+            <li class="nav-social-item">
               <a
                 href="https://www.linkedin.com/in/rayan-mouhib-b75543448/"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
-                <i class="fa-brands fa-linkedin-in" style="color: #f0f8ff"></i>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
               </a>
             </li>
           </ul>
         </nav>
 
-        <div class="hamburger">
+        <div
+          class="hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
       </div>
     </header>
-
-    
   </body>
 </html>

@@ -1,11 +1,23 @@
+:root {
+  --background: #0b1120;
+  --surface: #111827;
+  --primary: #2563eb;
+  --accent: #38bdf8;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: #1e293b;
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
 body {
-  font-family: "Inter", sans-serif;
-  background-color: #0b1120;
+  background-color: var(--background);
   height: 1000px;
   padding-top: 60px;
   font-family: "JetBrains Mono", monospace;
@@ -18,11 +30,11 @@ a {
   color: inherit;
 }
 .header {
-  background-color: #111827;
+  background-color: var(--surface);
   position: fixed;
   width: 100%;
   top: 0;
-  border-bottom: 1px solid #1e293b;
+  border-bottom: 1px solid var(--border);
 }
 .header_content {
   position: relative;
@@ -41,31 +53,29 @@ a {
 .logo {
   position: relative;
   z-index: 1;
-  color: white;
-  
+  color: var(--text);
 }
 .icon-online {
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: #38bdf8;
-  margin-left: -20px;
-  top: 30%;
-  border: 0.3px solid #2563EB;
+  background-color: var(--accent);
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
   border-radius: 50%;
   box-shadow: 0 0 0px 8px #24324985;
   cursor: pointer;
   transition: transform 0.5s;
-  
 }
-.icon-online:hover{
-  transform: scale(1.1);
+.icon-online:hover {
+  transform: translateY(-50%) scale(1.1);
 }
 
 .nav {
   transition: all 0.3s ease-in-out;
 }
-.nav-list1 {
+.nav-links {
   display: flex;
   gap: 40px;
   position: absolute;
@@ -74,36 +84,41 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.nav-link1 {
-  color: rgba(255, 255, 255, 0.5);
+.nav-link {
+  color: var(--muted);
   font-size: 15px;
   transition: all 0.4s;
 }
-.nav-link1:hover,
-.nav-link1:focus {
-  color: rgba(255, 255, 255, 1);
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--text);
 }
-.nav-list2 {
+.nav-social {
   display: flex;
   gap: 10px;
   position: absolute;
   top: 50%;
   right: 30px;
   transform: translateY(-50%);
-  
 }
-.nav-list2 a{
+.nav-social a {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 30px;
   height: 30px;
-  transition: transform 0.3s ease;
+  color: var(--text);
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
   text-decoration: none;
 }
-.nav-list2 a:hover{
-  transform: scale(1.3);
-  background-color: #38bdf8;
+.nav-social a:hover,
+.nav-social a:focus-visible {
+  transform: scale(1.2);
+  background-color: var(--accent);
+  color: var(--background);
   border-radius: 20%;
 }
 
@@ -136,10 +151,11 @@ a {
 .hamburger-open .bar:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
+.nav-social-item svg {
+  width: 18px;
+  height: 18px;
+}
 @media (max-width: 600px) {
-  .icon-online {
-    left: -5px;
-  }
   .header_content {
     display: flex;
     justify-content: center;
@@ -156,7 +172,7 @@ a {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #111827;
+    background-color: var(--surface);
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -169,6 +185,7 @@ a {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+    border-bottom: 2px solid var(--border);
   }
 
   .nav.nav-open {
@@ -182,7 +199,7 @@ a {
     pointer-events: auto;
   }
 
-  .nav-list1 {
+  .nav-links {
     position: static;
     order: 3;
     flex-direction: column;
@@ -191,7 +208,7 @@ a {
     padding: 25px;
   }
 
-  .nav-list2 {
+  .nav-social {
     position: static;
     order: 1;
     flex-direction: row;
@@ -205,7 +222,7 @@ a {
     order: 2;
     width: 200%;
     border: 0;
-    border-top: 1px solid #38BDF8;
+    border-top: 1px solid var(--accent);
     margin: 0;
     position: absolute;
     top: 20%;
@@ -214,5 +231,23 @@ a {
     display: block;
     position: absolute;
     left: 2%;
+  }
+  .brand {
+    left: 0;
+    font-size: large;
+  }
+  .nav-link {
+    display: block;
+    padding: 5px 0;
+  }
+  .nav-social a {
+    width: 20px;
+    height: 20px;
+    margin-left: 60px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
 }
